@@ -42,7 +42,8 @@ export const Services = () => (
               <img
                 src="/office-desk.jpg"
                 alt="Productividad desde el ser"
-                className="absolute inset-0 w-full h-full object-cover"
+                className="absolute inset-0 w-full h-full object-cover scale-150 object-left-top"
+                style={{ left: '-10%', top: '-10%' }}
                 width={1000}
                 height={1000}
               />

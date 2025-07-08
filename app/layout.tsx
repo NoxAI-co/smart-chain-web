@@ -23,19 +23,21 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={`${geistSans.className} antialiased`}>
         {/* Blobs animados de fondo */}
         <div className="fixed inset-0 -z-10 pointer-events-none overflow-hidden">
-          {/* Blob 1 */}
-          <div className="absolute top-[-10%] left-[-10%] w-[600px] h-[600px] bg-gradient-to-br from-purple-600 via-blue-500 to-transparent opacity-40 rounded-full blur-3xl animate-blob1" />
-          {/* Blob 2 */}
-          <div className="absolute bottom-[-10%] right-[-10%] w-[700px] h-[700px] bg-gradient-to-tr from-blue-500 via-purple-400 to-transparent opacity-30 rounded-full blur-3xl animate-blob2" />
+          {/* Blob 1 con animación de opacidad y escala */}
+          <div className="absolute top-[-10%] left-[-10%] w-[600px] h-[600px] bg-gradient-to-br from-purple-600 via-blue-500 to-transparent opacity-40 rounded-full blur-3xl animate-blob1 animate-blob-fade animate-blob-scale" />
+          {/* Blob 2 con animación de opacidad y escala */}
+          <div className="absolute bottom-[-10%] right-[-10%] w-[700px] h-[700px] bg-gradient-to-tr from-blue-500 via-purple-400 to-transparent opacity-30 rounded-full blur-3xl animate-blob2 animate-blob-fade animate-blob-scale" />
         </div>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
           disableTransitionOnChange
+          enableSystem={false}
+          storageKey="theme"
         >
           {children}
         </ThemeProvider>

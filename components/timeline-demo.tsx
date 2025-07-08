@@ -8,7 +8,7 @@ export default function TimelineDemo() {
       title: "Escucha Consciente",
       content: (
         <div>
-          <BlurFade direction="right" blur="16px" duration={0.8}>
+          <BlurFade direction="right" blur="16px" duration={1.2} inView inViewMargin="-20% 0% -20% 0%">
             <img
               src="https://assets.aceternity.com/templates/startup-1.webp"
               alt="startup template"
@@ -17,7 +17,7 @@ export default function TimelineDemo() {
               className="h-64 w-full object-contain md:h-80 lg:h-96"
             />
           </BlurFade>
-          <p className="mt-2 text-xs text-neutral-500 text-center">Profundizamos en tu realidad actual para entender no solo qué necesitas, sino por qué lo necesitas.</p>
+          <p className="mt-2 text-xs text-neutral-200 text-center">Profundizamos en tu realidad actual para entender no solo qué necesitas, sino por qué lo necesitas.</p>
         </div>
       ),
     },
@@ -25,7 +25,7 @@ export default function TimelineDemo() {
       title: "Exploración Visual",
       content: (
         <div>
-          <BlurFade direction="right" blur="16px" duration={0.8}>
+          <BlurFade direction="right" blur="16px" duration={1.2} inView inViewMargin="-20% 0% -20% 0%">
             <img
               src="https://assets.aceternity.com/templates/startup-2.webp"
               alt="startup template 2"
@@ -34,7 +34,7 @@ export default function TimelineDemo() {
               className="h-64 w-full object-contain md:h-80 lg:h-96"
             />
           </BlurFade>
-          <p className="mt-2 text-xs text-neutral-500 text-center">Analizamos visualmente tu contexto para identificar oportunidades y retos clave.</p>
+          <p className="mt-2 text-xs text-neutral-200 text-center">Analizamos visualmente tu contexto para identificar oportunidades y retos clave.</p>
         </div>
       ),
     },
@@ -42,7 +42,7 @@ export default function TimelineDemo() {
       title: "Diseño Colaborativo",
       content: (
         <div>
-          <BlurFade direction="right" blur="16px" duration={0.8}>
+          <BlurFade direction="right" blur="16px" duration={1.2} inView inViewMargin="-20% 0% -20% 0%">
             <img
               src="https://assets.aceternity.com/pro/hero-sections.png"
               alt="hero template"
@@ -51,7 +51,7 @@ export default function TimelineDemo() {
               className="h-64 w-full object-contain md:h-80 lg:h-96"
             />
           </BlurFade>
-          <p className="mt-2 text-xs text-neutral-500 text-center">Creamos soluciones modulares que se adaptan a tu ritmo y necesidades específicas.</p>
+          <p className="mt-2 text-xs text-neutral-200 text-center">Creamos soluciones modulares que se adaptan a tu ritmo y necesidades específicas.</p>
         </div>
       ),
     },
@@ -59,7 +59,7 @@ export default function TimelineDemo() {
       title: "Inspiración Visual",
       content: (
         <div>
-          <BlurFade direction="right" blur="16px" duration={0.8}>
+          <BlurFade direction="right" blur="16px" duration={1.2} inView inViewMargin="-20% 0% -20% 0%">
             <img
               src="https://assets.aceternity.com/features-section.png"
               alt="feature template"
@@ -68,7 +68,7 @@ export default function TimelineDemo() {
               className="h-64 w-full object-contain md:h-80 lg:h-96"
             />
           </BlurFade>
-          <p className="mt-2 text-xs text-neutral-500 text-center">Nos inspiramos en referentes visuales para potenciar la creatividad de tu equipo.</p>
+          <p className="mt-2 text-xs text-neutral-200 text-center">Nos inspiramos en referentes visuales para potenciar la creatividad de tu equipo.</p>
         </div>
       ),
     },
@@ -76,7 +76,7 @@ export default function TimelineDemo() {
       title: "Acciones",
       content: (
         <div>
-          <BlurFade direction="right" blur="16px" duration={0.8}>
+          <BlurFade direction="right" blur="16px" duration={1.2} inView inViewMargin="-20% 0% -20% 0%">
             <img
               src="https://assets.aceternity.com/pro/hero-sections.png"
               alt="hero template"
@@ -85,7 +85,7 @@ export default function TimelineDemo() {
               className="h-64 w-full object-contain md:h-80 lg:h-96"
             />
           </BlurFade>
-          <p className="mt-2 text-xs text-neutral-500 text-center">Implementamos juntos, con acompañamiento constante y ajustes en tiempo real.</p>
+          <p className="mt-2 text-xs text-neutral-200 text-center">Implementamos juntos, con acompañamiento constante y ajustes en tiempo real.</p>
         </div>
       ),
     },
@@ -93,7 +93,7 @@ export default function TimelineDemo() {
       title: "Implementación Visual",
       content: (
         <div>
-          <BlurFade direction="right" blur="16px" duration={0.8}>
+          <BlurFade direction="right" blur="16px" duration={1.2} inView inViewMargin="-20% 0% -20% 0%">
             <img
               src="https://assets.aceternity.com/features-section.png"
               alt="feature template"
@@ -102,7 +102,7 @@ export default function TimelineDemo() {
               className="h-64 w-full object-contain md:h-80 lg:h-96"
             />
           </BlurFade>
-          <p className="mt-2 text-xs text-neutral-500 text-center">Mostramos el avance visual de la implementación para asegurar alineación continua.</p>
+          <p className="mt-2 text-xs text-neutral-200 text-center">Mostramos el avance visual de la implementación para asegurar alineación continua.</p>
         </div>
       ),
     },
@@ -110,7 +110,7 @@ export default function TimelineDemo() {
       title: "Aprendizaje continuo",
       content: (
         <div>
-          <BlurFade direction="right" blur="16px" duration={0.8}>
+          <BlurFade direction="right" blur="16px" duration={1.2} inView inViewMargin="-20% 0% -20% 0%">
             <img
               src="https://assets.aceternity.com/pro/hero-sections.png"
               alt="hero template"
@@ -119,7 +119,7 @@ export default function TimelineDemo() {
               className="h-64 w-full object-contain md:h-80 lg:h-96"
             />
           </BlurFade>
-          <p className="mt-2 text-xs text-neutral-500 text-center">Tu equipo aprende mientras transforma, construyendo capacidades internas permanentes.</p>
+          <p className="mt-2 text-xs text-neutral-200 text-center">Tu equipo aprende mientras transforma, construyendo capacidades internas permanentes.</p>
         </div>
       ),
     },
@@ -127,7 +127,7 @@ export default function TimelineDemo() {
       title: "Capacitación Visual",
       content: (
         <div>
-          <BlurFade direction="right" blur="16px" duration={0.8}>
+          <BlurFade direction="right" blur="16px" duration={1.2} inView inViewMargin="-20% 0% -20% 0%">
             <img
               src="https://assets.aceternity.com/features-section.png"
               alt="feature template"
@@ -136,7 +136,7 @@ export default function TimelineDemo() {
               className="h-64 w-full object-contain md:h-80 lg:h-96"
             />
           </BlurFade>
-          <p className="mt-2 text-xs text-neutral-500 text-center">Recursos visuales para fortalecer el aprendizaje y la apropiación de nuevas capacidades.</p>
+          <p className="mt-2 text-xs text-neutral-200 text-center">Recursos visuales para fortalecer el aprendizaje y la apropiación de nuevas capacidades.</p>
         </div>
       ),
     },
@@ -144,7 +144,7 @@ export default function TimelineDemo() {
       title: "Medición de impacto",
       content: (
         <div>
-          <BlurFade direction="right" blur="16px" duration={0.8}>
+          <BlurFade direction="right" blur="16px" duration={1.2} inView inViewMargin="-20% 0% -20% 0%">
             <img
               src="https://assets.aceternity.com/pro/hero-sections.png"
               alt="hero template"
@@ -153,7 +153,7 @@ export default function TimelineDemo() {
               className="h-64 w-full object-contain md:h-80 lg:h-96"
             />
           </BlurFade>
-          <p className="mt-2 text-xs text-neutral-500 text-center">Medimos no solo resultados, sino el cambio cultural y la sostenibilidad de la transformación.</p>
+          <p className="mt-2 text-xs text-neutral-200 text-center">Medimos no solo resultados, sino el cambio cultural y la sostenibilidad de la transformación.</p>
         </div>
       ),
     },
@@ -161,7 +161,7 @@ export default function TimelineDemo() {
       title: "Resultados Visuales",
       content: (
         <div>
-          <BlurFade direction="right" blur="16px" duration={0.8}>
+          <BlurFade direction="right" blur="16px" duration={1.2} inView inViewMargin="-20% 0% -20% 0%">
             <img
               src="https://assets.aceternity.com/features-section.png"
               alt="feature template"
@@ -170,7 +170,7 @@ export default function TimelineDemo() {
               className="h-64 w-full object-contain md:h-80 lg:h-96"
             />
           </BlurFade>
-          <p className="mt-2 text-xs text-neutral-500 text-center">Visualizamos los resultados para evidenciar el impacto y la evolución lograda.</p>
+          <p className="mt-2 text-xs text-neutral-200 text-center">Visualizamos los resultados para evidenciar el impacto y la evolución lograda.</p>
         </div>
       ),
     },

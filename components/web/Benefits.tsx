@@ -28,7 +28,7 @@ export function Benefits() {
     },
     {
       title: "Crecer desde el ser",
-      description: "Generar copys con IA",
+      description: "Impulsamos el desarrollo personal y profesional desde la autenticidad, para que cada organización evolucione desde su esencia.",
       src: "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?w=400&h=300&fit=crop&crop=center",
     }
   ]
@@ -55,7 +55,7 @@ export function Benefits() {
           <div className="flex flex-col justify-center rounded-lg p-4">
             <div className="flex flex-wrap items-center justify-center gap-4">
               {cards.map((card, index) => (
-                <MinimalCard className="background rounded-xl bg-[#030811] w-full sm:w-[calc(25%-12px)] max-w-[300px]" key={index}>                  <MinimalCardImage
+                <MinimalCard className="background rounded-xl bg-[#030811] w-full sm:w-[calc(25%-12px)] max-w-[260px] min-h-[300px]" key={index}>                  <MinimalCardImage
                     className="h-[120px]"
                     src={card.src}
                     alt={card.title}
