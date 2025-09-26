@@ -38,10 +38,10 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
     >
       <div className="mx-auto flex max-w-container flex-col items-center gap-4 text-center sm:gap-16">
         <div className="flex flex-col items-center gap-4 px-4 sm:gap-8">
-          <h2 className="max-w-[720px] text-3xl font-semibold leading-tight sm:text-5xl sm:leading-tight text-white drop-shadow-lg" style={{ textShadow: '3px 3px 6px rgba(0,0,0,0.9), 0 0 12px rgba(0,0,0,0.7)' }}>
+          <h2 className="max-w-[720px] text-3xl font-semibold leading-tight sm:text-5xl sm:leading-tight text-white">
             Un camino claro para que evoluciones, no solo mejores
           </h2>
-          <p className="text-md max-w-[600px] font-medium text-white/80 sm:text-xl drop-shadow-md" style={{ textShadow: '1px 1px 3px rgba(0,0,0,0.8), 0 0 6px rgba(0,0,0,0.5)' }}>
+          <p className="text-md max-w-[600px] font-medium text-white/80 sm:text-xl">
             Nuestro proceso está diseñado para guiar tu transformación, no solo mejorar tu desempeño.
           </p>
         </div>
@@ -57,13 +57,13 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
               <div className="h-10 absolute left-3 md:left-3 w-10 rounded-full bg-white dark:bg-black flex items-center justify-center shadow-lg border-2 border-blue-500/20">
                 <div className="h-4 w-4 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 border-2 border-white dark:border-black shadow-md" />
               </div>
-              <h3 className="hidden md:block text-xl md:pl-20 md:text-3xl font-bold text-white dark:text-white drop-shadow-lg" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.8), 0 0 8px rgba(0,0,0,0.6)' }}>
+              <h3 className="hidden md:block text-xl md:pl-20 md:text-3xl font-semibold text-white dark:text-white">
                 {item.title}
               </h3>
             </div>
 
             <div className="relative pl-20 pr-4 md:pl-4 w-full">
-              <h3 className="md:hidden block text-xl mb-4 text-left font-bold text-white dark:text-white drop-shadow-lg" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.8), 0 0 8px rgba(0,0,0,0.6)' }}>
+              <h3 className="md:hidden block text-xl mb-4 text-left font-semibold text-white dark:text-white">
                 {item.title}
               </h3>
               {item.content}{" "}

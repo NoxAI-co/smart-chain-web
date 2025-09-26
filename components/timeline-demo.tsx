@@ -17,7 +17,7 @@ export default function TimelineDemo() {
               className="h-64 w-full object-contain md:h-80 lg:h-96"
             />
           </BlurFade>
-          <p className="mt-2 text-xs text-white/90 text-center drop-shadow-sm" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.7), 0 0 4px rgba(0,0,0,0.5)' }}>Profundizamos en tu realidad actual para entender no solo qué necesitas, sino por qué lo necesitas.</p>
+          <p className="mt-2 text-xs text-white/90 text-center">Profundizamos en tu realidad actual para entender no solo qué necesitas, sino por qué lo necesitas.</p>
         </div>
       ),
     },

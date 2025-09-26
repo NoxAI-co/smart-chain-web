@@ -167,7 +167,7 @@ export const NavBar = () => {
         </div>
         <div className="flex lg:justify-center">
           <Image
-            src="/smart.png"
+            src="/smart.PNG"
             alt="Smart Chain Solutions"
             width={60}
             height={60}
