@@ -44,7 +44,7 @@ export const Competitive = () => {
   ];
 
   return (
-    <div className="w-full py-20 lg:py-40 bg-muted/30">
+    <div className="w-full py-16">
       <div className="container mx-auto">
         <div className="flex gap-4 flex-col items-center text-center mb-16">
           <div>

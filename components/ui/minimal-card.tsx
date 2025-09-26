@@ -8,7 +8,7 @@ const MinimalCard = React.forwardRef<
   <div
     ref={ref}
     className={cn(
-      "background rounded-xl bg-[#030811] p-1.5 shadow-sm transition-colors hover:bg-neutral-100 dark:bg-[#030811] dark:hover:bg-[#030811]/80",
+      "background rounded-xl bg-black/80 backdrop-blur-sm p-1.5 shadow-sm transition-colors hover:bg-black/90 dark:bg-black/80 dark:hover:bg-black/90",
       "shadow-[0px_1px_1px_0px_rgba(0,0,0,0.05),0px_0px_0px_1px_hsla(0,0%,100%,0.1)_inset]",
       "dark:shadow-[0_1px_0_0_rgba(255,255,255,0.03)_inset,0_0_0_1px_rgba(255,255,255,0.03)_inset,0_0_0_1px_rgba(0,0,0,0.1)]",
       className
@@ -48,7 +48,7 @@ const MinimalCardTitle = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <h3
     ref={ref}
-    className={cn("px-1 text-sm font-semibold leading-tight", className)}
+    className={cn("px-1 text-sm font-semibold leading-tight text-white", className)}
     {...props}
   />
 ))
@@ -60,7 +60,7 @@ const MinimalCardDescription = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <p
     ref={ref}
-    className={cn("px-1 pb-1 text-xs text-neutral-500 leading-relaxed", className)}
+    className={cn("px-1 pb-1 text-xs text-white/80 leading-relaxed", className)}
     {...props}
   />
 ))

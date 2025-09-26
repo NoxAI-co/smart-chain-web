@@ -34,9 +34,9 @@ export function Benefits() {
   ]
 
   return (
-    <div id="benefits" className="w-full py-20 lg:py-40">
+    <div className="w-full py-16">
       <div className="container mx-auto">
-        <div className="flex gap-4 py-20 lg:py-10 flex-col items-center text-center">
+        <div className="flex gap-4 py-8 lg:py-12 flex-col items-center text-center">
           <div>
             <Badge variant={'outline'}>Lo que nos mueve</Badge>
           </div>
@@ -55,18 +55,24 @@ export function Benefits() {
           <div className="flex flex-col justify-center rounded-lg p-4">
             <div className="flex flex-wrap items-center justify-center gap-4">
               {cards.map((card, index) => (
-                <MinimalCard className="background rounded-xl bg-[#030811] w-full sm:w-[calc(25%-12px)] max-w-[260px] min-h-[300px]" key={index}>                  <MinimalCardImage
-                    className="h-[120px]"
-                    src={card.src}
-                    alt={card.title}
-                  />
-                  <MinimalCardTitle className="text-xl font-semibold mt-4">
-                    {card.title}
-                  </MinimalCardTitle>
-                  <MinimalCardDescription className="text-muted-foreground leading-relaxed">
-                    {card.description}
-                  </MinimalCardDescription>
-                </MinimalCard>
+                <div 
+                  key={index}
+                  className="w-full sm:w-[calc(25%-12px)] max-w-[260px] min-h-[300px]"
+                >
+                  <MinimalCard className="background rounded-xl bg-[#030811] w-full h-full">
+                    <MinimalCardImage
+                      className="h-[120px]"
+                      src={card.src}
+                      alt={card.title}
+                    />
+                    <MinimalCardTitle className="text-xl font-semibold mt-4">
+                      {card.title}
+                    </MinimalCardTitle>
+                    <MinimalCardDescription className="text-muted-foreground leading-relaxed">
+                      {card.description}
+                    </MinimalCardDescription>
+                  </MinimalCard>
+                </div>
               ))}
             </div>
           </div>

@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 export default function LogoCloud() {
     return (
-        <section className="overflow-hidden py-8">
+        <section className="overflow-hidden pt-16 pb-8">
             <div className="group relative w-full">
                 <div className="flex flex-col items-center md:flex-row">
                     <div className="md:max-w-44 md:border-r md:pr-6">

@@ -3,7 +3,6 @@
 import { User, ChartBar } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { BlurFade } from "@/components/magicui/blur-fade";
 import { ProgressiveBlur } from "../ui/progressive-blur";
 
 
@@ -18,8 +17,8 @@ const scrollToSection = (sectionId: string) => {
 };
 
 export const Services = () => (
-  <div className="w-full py-20 lg:py-40">
-    <div className="container mx-auto">
+  <div className="w-full relative pt-16 pb-64">
+    <div className="container mx-auto relative z-10">
       <div className="flex flex-col gap-10">
         <div className="flex gap-4 flex-col items-start">
           <div>
@@ -36,97 +35,110 @@ export const Services = () => (
             </p>
           </div>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          <BlurFade delay={0.35} inView className="lg:col-span-2">
-            <div className="relative rounded-md h-full overflow-hidden">
-              <img
-                src="/office-desk.jpg"
-                alt="Productividad desde el ser"
-                className="absolute inset-0 w-full h-full object-cover scale-150 object-left-top"
-                style={{ left: '-10%', top: '-10%' }}
-                width={1000}
-                height={1000}
-              />
-              <ProgressiveBlur
-                className="pointer-events-none absolute bottom-0 left-0 h-[65%] w-full"
-                blurIntensity={1}
-              />
-              <div className="relative h-full p-6 flex flex-col justify-between">
-                <User className="w-8 h-8 stroke-1 text-white/90" />
-                <div className="flex flex-col gap-4">
-                  <div className="flex flex-col">
-                    <h3 className="text-xl tracking-tight text-white font-semibold">
-                      Productividad desde el ser
-                    </h3>
-                    <p className="text-white/90 max-w-xs md:max-w-lg text-base">
-                      Maximizamos la eficiencia integrando herramientas
-                      digitales con bienestar laboral. Porque no hay resultados
-                      sin personas sanas.
-                    </p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 relative">
+          {/* Luz azul indirecta desde el centro */}
+          <div 
+            className="absolute inset-0 pointer-events-none z-0"
+            style={{
+              background: `
+                radial-gradient(circle at 25% 25%, rgba(59, 130, 246, 0.3) 0%, transparent 40%),
+                radial-gradient(circle at 75% 25%, rgba(59, 130, 246, 0.3) 0%, transparent 40%),
+                radial-gradient(circle at 25% 75%, rgba(59, 130, 246, 0.3) 0%, transparent 40%),
+                radial-gradient(circle at 75% 75%, rgba(59, 130, 246, 0.3) 0%, transparent 40%)
+              `,
+              filter: 'blur(20px)',
+            }}
+          />
+          <div className="lg:col-span-2 relative z-10">
+              <div className="relative rounded-md h-full overflow-hidden">
+                <img
+                  src="/office-desk.jpg"
+                  alt="Productividad desde el ser"
+                  className="absolute inset-0 w-full h-full object-cover scale-150 object-left-top"
+                  style={{ left: '-10%', top: '-10%' }}
+                  width={1000}
+                  height={1000}
+                />
+                <ProgressiveBlur
+                  className="pointer-events-none absolute bottom-0 left-0 h-[65%] w-full"
+                  blurIntensity={1}
+                />
+                <div className="relative h-full p-6 flex flex-col justify-between">
+                  <User className="w-8 h-8 stroke-1 text-white/90" />
+                  <div className="flex flex-col gap-4">
+                    <div className="flex flex-col">
+                      <h3 className="text-xl tracking-tight text-white font-semibold">
+                        Productividad desde el ser
+                      </h3>
+                      <p className="text-white/90 max-w-xs md:max-w-lg text-base">
+                        Maximizamos la eficiencia integrando herramientas
+                        digitales con bienestar laboral. Porque no hay resultados
+                        sin personas sanas.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </BlurFade>
+          </div>
 
-          <BlurFade delay={0.45} inView>
-            <div
-              className="relative rounded-md aspect-square overflow-hidden"
-            >
-              <img
-                src="/bento-2.svg"
-                alt="Transformación digital"
-                className="w-full h-full object-cover"
-              />
-            </div>
-          </BlurFade>
-
-          <BlurFade delay={0.55} inView>
-            <div
-              className="relative rounded-md aspect-square overflow-hidden"
-            >
-              <img
-                src="/bento-1.svg"
-                alt="Logística consciente"
-                className="w-full h-full object-cover"
-              />
-            </div>
-          </BlurFade>
-
-          <BlurFade delay={0.65} inView className="lg:col-span-2">
-            <div className="relative rounded-md h-full p-6 aspect-square lg:aspect-auto flex justify-between flex-col overflow-hidden">
-              <img
-                src="/woman-image.jpg"
-                alt="Eficiencia organizacional con sentido"
-                className="absolute inset-0 w-full h-full object-cover"
-                width={1000}
-                height={1000}
-              />
-              <ChartBar className="w-8 h-8 stroke-1 text-white/90" />
-              <div className="flex flex-col gap-4 relative z-10">
-                <div className="flex flex-col">
-                  <h3 className="text-xl tracking-tight text-white font-semibold">
-                    Eficiencia organizacional con sentido
-                  </h3>
-                  <p className="text-white/90 text-base">
-                    No se trata de hacer más. Se trata de hacer mejor, con menos
-                    fricción, más enfoque y propósito claro.
-                  </p>
-                </div>
-                <Button
-                  variant="secondary"
-                  className="w-fit bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white/20 transition-all"
-                  onClick={() => scrollToSection("cta")}
-                >
-                  Quiero operar con propósito
-                </Button>
+          <div className="relative z-10">
+              <div
+                className="relative rounded-md aspect-square overflow-hidden"
+              >
+                <img
+                  src="/bento-2.svg"
+                  alt="Transformación digital"
+                  className="w-full h-full object-cover"
+                />
               </div>
-              <ProgressiveBlur
-                className="pointer-events-none absolute bottom-0 left-0 h-[80%] w-full"
-                blurIntensity={1}
-              />
-            </div>
-          </BlurFade>
+          </div>
+
+          <div className="relative z-10">
+              <div
+                className="relative rounded-md aspect-square overflow-hidden"
+              >
+                <img
+                  src="/bento-1.svg"
+                  alt="Logística consciente"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+          </div>
+
+          <div className="lg:col-span-2 relative z-10">
+              <div className="relative rounded-md h-full p-6 aspect-square lg:aspect-auto flex justify-between flex-col overflow-hidden">
+                <img
+                  src="/woman-image.jpg"
+                  alt="Eficiencia organizacional con sentido"
+                  className="absolute inset-0 w-full h-full object-cover"
+                  width={1000}
+                  height={1000}
+                />
+                <ChartBar className="w-8 h-8 stroke-1 text-white/90" />
+                <div className="flex flex-col gap-4 relative z-10">
+                  <div className="flex flex-col">
+                    <h3 className="text-xl tracking-tight text-white font-semibold">
+                      Eficiencia organizacional con sentido
+                    </h3>
+                    <p className="text-white/90 text-base">
+                      No se trata de hacer más. Se trata de hacer mejor, con menos
+                      fricción, más enfoque y propósito claro.
+                    </p>
+                  </div>
+                  <Button
+                    variant="secondary"
+                    className="w-fit bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white/20 transition-all"
+                    onClick={() => scrollToSection("cta")}
+                  >
+                    Quiero operar con propósito
+                  </Button>
+                </div>
+                <ProgressiveBlur
+                  className="pointer-events-none absolute bottom-0 left-0 h-[80%] w-full"
+                  blurIntensity={1}
+                />
+              </div>
+          </div>
         </div>
       </div>
     </div>

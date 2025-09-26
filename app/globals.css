@@ -244,6 +244,50 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground overflow-x-hidden;
   }
+}
+
+/* Scroll animations styles */
+.scroll-animated-section {
+  will-change: transform, opacity, filter;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+
+/* Smooth transitions between sections */
+section {
+  scroll-behavior: smooth;
+}
+
+/* Enhanced blur effects */
+.blur-scroll-effect {
+  backdrop-filter: blur(0px);
+  transition: backdrop-filter 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.blur-scroll-effect.active {
+  backdrop-filter: blur(10px);
+}
+
+/* Parallax-like effects */
+.parallax-section {
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+/* Smooth fade transitions */
+.fade-transition {
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Scale animations */
+.scale-transition {
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Combined animation effects */
+.combined-animation {
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform, opacity, filter;
 }

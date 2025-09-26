@@ -27,10 +27,11 @@ export const Hero = () => {
   return (
     <div className="w-full">
       <div className="container mx-auto">
-        <div className="flex gap-8 py-20 lg:py-40 items-center justify-center flex-col">
+        <div className="flex gap-8 pt-56 pb-20 lg:pt-72 lg:pb-24 items-center justify-center flex-col">
           <div>
             <TrustedBy />
           </div>
+          
           <div className="flex gap-4 flex-col">
             <h1 className="text-5xl md:text-7xl max-w-2xl tracking-tighter text-center font-regular">
               <span className="text-spektr-cyan-50">Consultoria que une</span>
@@ -51,7 +52,7 @@ export const Hero = () => {
                         : {
                             y: titleNumber > index ? -150 : 150,
                             opacity: 0,
-                          }
+                            }
                     }
                   >
                     {title}
@@ -64,6 +65,7 @@ export const Hero = () => {
             Transformamos organizaciones con un enfoque consciente, modular y centrado en el ser. Creamos impacto real combinando estrategia, cultura e innovación.
             </p>
           </div>
+          
           <div className="flex flex-row gap-3">
             <Button size="lg" className="gap-4" variant="outline">
               Agendar llamada <PhoneCall className="w-4 h-4" />

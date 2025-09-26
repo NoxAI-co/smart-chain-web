@@ -10,7 +10,7 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 import { Menu, MoveRight, X } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import { InteractiveButton } from "../ui/interactive-button";
 
@@ -27,6 +27,18 @@ const scrollToSection = (sectionId: string) => {
 };
 
 export const NavBar = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      setIsScrolled(scrollTop > 50);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const navigationItems = [
     {
       title: "Inicio",
@@ -83,7 +95,11 @@ export const NavBar = () => {
 
   const [isOpen, setOpen] = useState(false);
   return (
-    <header className="w-full z-50 fixed top-0 left-0 bg-background shadow-xl">
+    <header className={`w-full z-50 fixed top-0 left-0 transition-all duration-300 ${
+      isScrolled 
+        ? 'bg-background/60 backdrop-blur-lg shadow-lg' 
+        : 'bg-background shadow-xl'
+    }`}>
       <div className="container relative mx-auto min-h-20 flex gap-4 flex-row lg:grid lg:grid-cols-3 items-center">
         <div className="justify-start items-center gap-4 lg:flex hidden flex-row">
           <NavigationMenu className="flex justify-start items-start">

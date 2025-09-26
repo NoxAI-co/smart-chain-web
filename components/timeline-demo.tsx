@@ -17,7 +17,7 @@ export default function TimelineDemo() {
               className="h-64 w-full object-contain md:h-80 lg:h-96"
             />
           </BlurFade>
-          <p className="mt-2 text-xs text-neutral-200 text-center">Profundizamos en tu realidad actual para entender no solo qué necesitas, sino por qué lo necesitas.</p>
+          <p className="mt-2 text-xs text-white/90 text-center drop-shadow-sm" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.7), 0 0 4px rgba(0,0,0,0.5)' }}>Profundizamos en tu realidad actual para entender no solo qué necesitas, sino por qué lo necesitas.</p>
         </div>
       ),
     },
@@ -34,7 +34,7 @@ export default function TimelineDemo() {
               className="h-64 w-full object-contain md:h-80 lg:h-96"
             />
           </BlurFade>
-          <p className="mt-2 text-xs text-neutral-200 text-center">Analizamos visualmente tu contexto para identificar oportunidades y retos clave.</p>
+          <p className="mt-2 text-xs text-white/90 text-center drop-shadow-sm" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.7), 0 0 4px rgba(0,0,0,0.5)' }}>Analizamos visualmente tu contexto para identificar oportunidades y retos clave.</p>
         </div>
       ),
     },
@@ -51,7 +51,7 @@ export default function TimelineDemo() {
               className="h-64 w-full object-contain md:h-80 lg:h-96"
             />
           </BlurFade>
-          <p className="mt-2 text-xs text-neutral-200 text-center">Creamos soluciones modulares que se adaptan a tu ritmo y necesidades específicas.</p>
+          <p className="mt-2 text-xs text-white/90 text-center drop-shadow-sm" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.7), 0 0 4px rgba(0,0,0,0.5)' }}>Creamos soluciones modulares que se adaptan a tu ritmo y necesidades específicas.</p>
         </div>
       ),
     },
@@ -68,7 +68,7 @@ export default function TimelineDemo() {
               className="h-64 w-full object-contain md:h-80 lg:h-96"
             />
           </BlurFade>
-          <p className="mt-2 text-xs text-neutral-200 text-center">Nos inspiramos en referentes visuales para potenciar la creatividad de tu equipo.</p>
+          <p className="mt-2 text-xs text-white/90 text-center drop-shadow-sm" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.7), 0 0 4px rgba(0,0,0,0.5)' }}>Nos inspiramos en referentes visuales para potenciar la creatividad de tu equipo.</p>
         </div>
       ),
     },
@@ -85,7 +85,7 @@ export default function TimelineDemo() {
               className="h-64 w-full object-contain md:h-80 lg:h-96"
             />
           </BlurFade>
-          <p className="mt-2 text-xs text-neutral-200 text-center">Implementamos juntos, con acompañamiento constante y ajustes en tiempo real.</p>
+          <p className="mt-2 text-xs text-white/90 text-center drop-shadow-sm" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.7), 0 0 4px rgba(0,0,0,0.5)' }}>Implementamos juntos, con acompañamiento constante y ajustes en tiempo real.</p>
         </div>
       ),
     },
@@ -102,7 +102,7 @@ export default function TimelineDemo() {
               className="h-64 w-full object-contain md:h-80 lg:h-96"
             />
           </BlurFade>
-          <p className="mt-2 text-xs text-neutral-200 text-center">Mostramos el avance visual de la implementación para asegurar alineación continua.</p>
+          <p className="mt-2 text-xs text-white/90 text-center drop-shadow-sm" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.7), 0 0 4px rgba(0,0,0,0.5)' }}>Mostramos el avance visual de la implementación para asegurar alineación continua.</p>
         </div>
       ),
     },
@@ -119,7 +119,7 @@ export default function TimelineDemo() {
               className="h-64 w-full object-contain md:h-80 lg:h-96"
             />
           </BlurFade>
-          <p className="mt-2 text-xs text-neutral-200 text-center">Tu equipo aprende mientras transforma, construyendo capacidades internas permanentes.</p>
+          <p className="mt-2 text-xs text-white/90 text-center drop-shadow-sm" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.7), 0 0 4px rgba(0,0,0,0.5)' }}>Tu equipo aprende mientras transforma, construyendo capacidades internas permanentes.</p>
         </div>
       ),
     },
@@ -136,7 +136,7 @@ export default function TimelineDemo() {
               className="h-64 w-full object-contain md:h-80 lg:h-96"
             />
           </BlurFade>
-          <p className="mt-2 text-xs text-neutral-200 text-center">Recursos visuales para fortalecer el aprendizaje y la apropiación de nuevas capacidades.</p>
+          <p className="mt-2 text-xs text-white/90 text-center drop-shadow-sm" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.7), 0 0 4px rgba(0,0,0,0.5)' }}>Recursos visuales para fortalecer el aprendizaje y la apropiación de nuevas capacidades.</p>
         </div>
       ),
     },
@@ -153,7 +153,7 @@ export default function TimelineDemo() {
               className="h-64 w-full object-contain md:h-80 lg:h-96"
             />
           </BlurFade>
-          <p className="mt-2 text-xs text-neutral-200 text-center">Medimos no solo resultados, sino el cambio cultural y la sostenibilidad de la transformación.</p>
+          <p className="mt-2 text-xs text-white/90 text-center drop-shadow-sm" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.7), 0 0 4px rgba(0,0,0,0.5)' }}>Medimos no solo resultados, sino el cambio cultural y la sostenibilidad de la transformación.</p>
         </div>
       ),
     },
@@ -170,7 +170,7 @@ export default function TimelineDemo() {
               className="h-64 w-full object-contain md:h-80 lg:h-96"
             />
           </BlurFade>
-          <p className="mt-2 text-xs text-neutral-200 text-center">Visualizamos los resultados para evidenciar el impacto y la evolución lograda.</p>
+          <p className="mt-2 text-xs text-white/90 text-center drop-shadow-sm" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.7), 0 0 4px rgba(0,0,0,0.5)' }}>Visualizamos los resultados para evidenciar el impacto y la evolución lograda.</p>
         </div>
       ),
     },
