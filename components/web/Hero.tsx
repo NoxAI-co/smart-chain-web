@@ -25,8 +25,8 @@ export const Hero = () => {
   }, [titleNumber, titles]);
 
   return (
-    <div className="w-full">
-      <div className="container mx-auto">
+    <div className="w-full max-w-full overflow-x-hidden">
+      <div className="container mx-auto px-4">
         <div className="flex gap-8 pt-56 pb-20 lg:pt-72 lg:pb-24 items-center justify-center flex-col">
           <div>
             <TrustedBy />

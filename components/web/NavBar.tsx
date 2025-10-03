@@ -200,7 +200,7 @@ export const NavBar = () => {
             {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </Button>
           {isOpen && (
-            <div className="absolute p-8 top-20 border-t flex flex-col w-full right-0 bg-background shadow-lg py-4 container gap-8">
+            <div className="absolute p-8 top-20 border-t flex flex-col w-full right-0 bg-background shadow-lg py-4 container gap-8 max-w-full overflow-x-hidden">
               {navigationItems.map((item) => (
                 <div key={item.title}>
                   <div className="flex flex-col gap-2">

@@ -1,6 +1,6 @@
 export const CTA = () => (
-  <div id="cta" className="w-full py-16 overflow-x-hidden">
-    <div className="mx-auto overflow-x-hidden">
+  <div id="cta" className="w-full max-w-full py-16 overflow-x-hidden">
+    <div className="mx-auto max-w-full overflow-x-hidden px-4">
       <div
         className="flex flex-col text-center bg-muted rounded-md p-4 lg:p-14 gap-8 items-center relative h-full bg-center sm:bg-top overflow-x-hidden"
         style={{

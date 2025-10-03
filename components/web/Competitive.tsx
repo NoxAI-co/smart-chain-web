@@ -44,8 +44,8 @@ export const Competitive = () => {
   ];
 
   return (
-    <div className="w-full py-16">
-      <div className="container mx-auto">
+    <div className="w-full max-w-full overflow-x-hidden py-16">
+      <div className="container mx-auto px-4">
         <div className="flex gap-4 flex-col items-center text-center mb-16">
           <div>
             <Badge variant={'outline'}>Comparativa</Badge>

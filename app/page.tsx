@@ -17,7 +17,7 @@ export default function Home() {
         <NavBar />
       </header>
 
-      <main className="flex min-h-screen flex-col items-center justify-between">
+      <main className="flex min-h-screen flex-col items-center justify-between w-full max-w-full overflow-x-hidden">
         <Hero />
         <Logos />
         <Services />

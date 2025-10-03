@@ -17,8 +17,8 @@ const scrollToSection = (sectionId: string) => {
 };
 
 export const Services = () => (
-  <div className="w-full relative pt-16 pb-64">
-    <div className="container mx-auto relative z-10">
+  <div className="w-full max-w-full overflow-x-hidden relative pt-16 pb-64">
+    <div className="container mx-auto relative z-10 px-4">
       <div className="flex flex-col gap-10">
         <div className="flex gap-4 flex-col items-start">
           <div>

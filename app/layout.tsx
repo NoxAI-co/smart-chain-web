@@ -28,8 +28,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={`${geistSans.className} antialiased`}>
+    <html lang="en" suppressHydrationWarning className="overflow-x-hidden">
+      <body className={`${geistSans.className} antialiased overflow-x-hidden`}>
         {/* Blobs animados de fondo */}
         <div className="fixed inset-0 -z-10 pointer-events-none overflow-hidden">
           {/* Blob 1 con animación de opacidad y escala */}

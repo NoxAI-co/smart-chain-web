@@ -33,8 +33,8 @@ export const FAQs = () => {
   ];
 
   return (
-    <div className="w-full py-20 lg:py-40">
-      <div className="container mx-auto">
+    <div className="w-full max-w-full overflow-x-hidden py-20 lg:py-40">
+      <div className="container mx-auto px-4">
         <div className="flex flex-col gap-10">
           <div className="flex text-center justify-center items-center gap-4 flex-col">
             <Badge variant="outline">FAQ</Badge>
