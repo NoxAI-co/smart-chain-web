@@ -3,7 +3,9 @@
 import { User, ChartBar } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ProgressiveBlur } from "../ui/progressive-blur";
+import { SectionBackground } from "@/components/ui/section-background";
+import Image from "next/image";
+import { motion } from "framer-motion";
 
 
 const scrollToSection = (sectionId: string) => {
@@ -17,7 +19,8 @@ const scrollToSection = (sectionId: string) => {
 };
 
 export const Services = () => (
-  <div className="w-full max-w-full overflow-x-hidden relative pt-16 pb-64">
+  <div className="w-full max-w-full overflow-x-hidden relative pt-16 pb-24">
+    <SectionBackground intensity={0.6} speed={55} />
     <div className="container mx-auto relative z-10 px-4">
       <div className="flex flex-col gap-10">
         <div className="flex gap-4 flex-col items-start">
@@ -36,33 +39,25 @@ export const Services = () => (
           </div>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 relative">
-          {/* Luz azul indirecta desde el centro */}
-          <div 
-            className="absolute inset-0 pointer-events-none z-0"
-            style={{
-              background: `
-                radial-gradient(circle at 25% 25%, rgba(59, 130, 246, 0.3) 0%, transparent 40%),
-                radial-gradient(circle at 75% 25%, rgba(59, 130, 246, 0.3) 0%, transparent 40%),
-                radial-gradient(circle at 25% 75%, rgba(59, 130, 246, 0.3) 0%, transparent 40%),
-                radial-gradient(circle at 75% 75%, rgba(59, 130, 246, 0.3) 0%, transparent 40%)
-              `,
-              filter: 'blur(20px)',
-            }}
-          />
-          <div className="lg:col-span-2 relative z-10">
+          <motion.div
+            className="lg:col-span-2 relative z-10"
+            initial={{ opacity: 0, x: -60 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+          >
               <div className="relative rounded-md h-full overflow-hidden">
-                <img
+                <Image
                   src="/office-desk.jpg"
                   alt="Productividad desde el ser"
-                  className="absolute inset-0 w-full h-full object-cover scale-150 object-left-top"
-                  style={{ left: '-10%', top: '-10%' }}
-                  width={1000}
-                  height={1000}
+                  fill
+                  priority={false}
+                  loading="lazy"
+                  className="object-cover object-left-top"
+                  sizes="(min-width: 1024px) 66vw, 100vw"
                 />
-                <ProgressiveBlur
-                  className="pointer-events-none absolute bottom-0 left-0 h-[65%] w-full"
-                  blurIntensity={1}
-                />
+                {/* Degradado ligero en vez de blur componible */}
+                <div className="pointer-events-none absolute bottom-0 left-0 h-[60%] w-full bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
                 <div className="relative h-full p-6 flex flex-col justify-between">
                   <User className="w-8 h-8 stroke-1 text-white/90" />
                   <div className="flex flex-col gap-4">
@@ -79,40 +74,61 @@ export const Services = () => (
                   </div>
                 </div>
               </div>
-          </div>
+          </motion.div>
 
-          <div className="relative z-10">
-              <div
-                className="relative rounded-md aspect-square overflow-hidden"
-              >
-                <img
+          <motion.div
+            className="relative z-10"
+            initial={{ opacity: 0, x: 60 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+          >
+              <div className="relative rounded-md aspect-square overflow-hidden">
+                <Image
                   src="/bento-2.svg"
                   alt="Transformación digital"
-                  className="w-full h-full object-cover"
+                  fill
+                  loading="lazy"
+                  className="object-cover"
+                  sizes="(min-width: 1024px) 33vw, 100vw"
                 />
               </div>
-          </div>
+          </motion.div>
 
-          <div className="relative z-10">
-              <div
-                className="relative rounded-md aspect-square overflow-hidden"
-              >
-                <img
+          <motion.div
+            className="relative z-10"
+            initial={{ opacity: 0, x: -60 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+          >
+              <div className="relative rounded-md aspect-square overflow-hidden">
+                <Image
                   src="/bento-1.svg"
                   alt="Logística consciente"
-                  className="w-full h-full object-cover"
+                  fill
+                  loading="lazy"
+                  className="object-cover"
+                  sizes="(min-width: 1024px) 33vw, 100vw"
                 />
               </div>
-          </div>
+          </motion.div>
 
-          <div className="lg:col-span-2 relative z-10">
+          <motion.div
+            className="lg:col-span-2 relative z-10"
+            initial={{ opacity: 0, x: 60 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+          >
               <div className="relative rounded-md h-full p-6 aspect-square lg:aspect-auto flex justify-between flex-col overflow-hidden">
-                <img
+                <Image
                   src="/woman-image.jpg"
                   alt="Eficiencia organizacional con sentido"
-                  className="absolute inset-0 w-full h-full object-cover"
-                  width={1000}
-                  height={1000}
+                  fill
+                  loading="lazy"
+                  className="object-cover"
+                  sizes="(min-width: 1024px) 66vw, 100vw"
                 />
                 <ChartBar className="w-8 h-8 stroke-1 text-white/90" />
                 <div className="flex flex-col gap-4 relative z-10">
@@ -133,12 +149,11 @@ export const Services = () => (
                     Quiero operar con propósito
                   </Button>
                 </div>
-                <ProgressiveBlur
-                  className="pointer-events-none absolute bottom-0 left-0 h-[80%] w-full"
-                  blurIntensity={1}
-                />
+                {/* Degradado ligero en vez de blur componible */
+                }
+                <div className="pointer-events-none absolute bottom-0 left-0 h-[70%] w-full bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
               </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>

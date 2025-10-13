@@ -60,7 +60,8 @@ export const Competitive = () => {
           </div>
         </div>
 
-        <div className="overflow-x-auto">
+        {/* Desktop Table View */}
+        <div className="hidden md:block overflow-x-auto">
           <table className="w-full border-collapse">
             <thead>
               <tr className="border-b border-muted">
@@ -106,6 +107,54 @@ export const Competitive = () => {
               ))}
             </tbody>
           </table>
+        </div>
+
+        {/* Mobile Card View */}
+        <div className="md:hidden space-y-4">
+          {comparisonData.map((item, index) => (
+            <div key={index} className="bg-card border border-border rounded-lg p-4 space-y-4">
+              {/* Feature Header */}
+              <div className="text-center">
+                <h3 className="font-medium text-lg">{item.feature}</h3>
+                <p className="text-sm text-muted-foreground mt-1">{item.description}</p>
+              </div>
+              
+              {/* Comparison Cards */}
+              <div className="grid grid-cols-2 gap-3">
+                {/* Smart Chain Solutions */}
+                <div className="bg-primary/10 border border-primary/20 rounded-lg p-3 text-center">
+                  <div className="flex justify-center items-center gap-2 mb-2">
+                    <Check className="w-5 h-5 text-primary" />
+                    <span className="text-sm font-medium text-primary">Sí</span>
+                  </div>
+                  <p className="text-xs text-muted-foreground">Smart Chain</p>
+                </div>
+                
+                {/* Competitors */}
+                <div className="bg-muted/20 border border-border rounded-lg p-3 text-center">
+                  <div className="flex justify-center items-center gap-2 mb-2">
+                    {item.competitors === "partial" ? (
+                      <>
+                        <Minus className="w-5 h-5 text-yellow-400" />
+                        <span className="text-sm font-medium text-yellow-400">Parcialmente</span>
+                      </>
+                    ) : (
+                      <>
+                        <X className="w-5 h-5 text-destructive" />
+                        <span className="text-sm font-medium text-destructive">No</span>
+                      </>
+                    )}
+                  </div>
+                  <p className="text-xs text-muted-foreground">Las demás</p>
+                </div>
+              </div>
+              
+              {/* Competitor Description */}
+              <div className="text-center">
+                <p className="text-xs text-muted-foreground italic">{item.competitorDescription}</p>
+              </div>
+            </div>
+          ))}
         </div>
 
         <div className="mt-8 text-center">

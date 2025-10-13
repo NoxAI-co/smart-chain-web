@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { MoveRight, PhoneCall } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { TrustedBy } from "@/components/ui/trusted-by";
+import { SectionBackground } from "@/components/ui/section-background";
 
 
 export const Hero = () => {
@@ -25,9 +26,10 @@ export const Hero = () => {
   }, [titleNumber, titles]);
 
   return (
-    <div className="w-full max-w-full overflow-x-hidden">
+    <div className="w-full max-w-full overflow-x-hidden relative">
+      <SectionBackground intensity={0.9} speed={45} />
       <div className="container mx-auto px-4">
-        <div className="flex gap-8 pt-56 pb-20 lg:pt-72 lg:pb-24 items-center justify-center flex-col">
+        <div className="flex gap-8 pt-32 pb-16 lg:pt-40 lg:pb-20 items-center justify-center flex-col">
           <div>
             <TrustedBy />
           </div>

@@ -62,11 +62,11 @@ export function Footer() {
 			<div className="grid w-full gap-8 xl:grid-cols-3 xl:gap-8">
 				<AnimatedContainer className="space-y-4">
 					<Image 
-						src="/smart.png" 
+						src="/smart.PNG" 
 						alt="Smart Chain Solutions" 
-						width={32} 
-						height={32} 
-						className="size-8"
+						width={120} 
+						height={40} 
+						className="h-8 w-auto object-contain"
 					/>
 					<p className="text-muted-foreground mt-8 text-sm md:mt-0">
 						© {new Date().getFullYear()} Smart Chain Solutions.

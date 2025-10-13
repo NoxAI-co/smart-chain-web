@@ -58,9 +58,6 @@ export function InfiniteSlider({
         repeat: Infinity,
         repeatType: 'loop',
         repeatDelay: 0,
-        onRepeat: () => {
-          translation.set(from);
-        },
       });
     }
 
@@ -100,6 +97,7 @@ export function InfiniteSlider({
             : { y: translation }),
           gap: `${gap}px`,
           flexDirection: direction === 'horizontal' ? 'row' : 'column',
+          willChange: 'transform',
         }}
         ref={ref}
         {...hoverProps}

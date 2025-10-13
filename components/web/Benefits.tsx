@@ -34,7 +34,7 @@ export function Benefits() {
   ]
 
   return (
-    <div className="w-full max-w-full overflow-x-hidden py-16">
+    <div id="benefits" className="w-full max-w-full overflow-x-hidden py-16">
       <div className="container mx-auto px-4">
         <div className="flex gap-4 py-8 lg:py-12 flex-col items-center text-center">
           <div>

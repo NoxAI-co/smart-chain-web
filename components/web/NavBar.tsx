@@ -133,16 +133,28 @@ export const NavBar = () => {
                                 {item.description}
                               </p>
                             </div>
-                            <button
-                              onClick={() => scrollToSection("cta")}
-                              className="relative mt-10 px-6 py-2 text-sm font-medium text-white bg-gradient-to-r from-[oklch(0.70_0.18_248.5)] to-[oklch(0.60_0.20_268.5)] rounded-lg overflow-hidden transition-all hover:scale-105 hover:shadow-xl"
-                            >
-                              <span className="relative z-10">
-                                Agenda tu diagnóstico
-                              </span>
-                              <div className="absolute inset-0 bg-gradient-to-r from-[oklch(0.75_0.22_248.5)] to-[oklch(0.65_0.25_268.5)] opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
-                              <div className="absolute inset-0 bg-gradient-to-r from-[oklch(0.55_0.15_248.5)] to-[oklch(0.50_0.18_268.5)] opacity-0 hover:opacity-100 blur-xl transition-opacity duration-300"></div>
-                            </button>
+                            <div className="mt-10 flex flex-col gap-3">
+                              <button
+                                onClick={() => {
+                                  window.open('https://wa.me/573112599459', '_blank', 'noopener,noreferrer');
+                                }}
+                                className="relative px-6 py-3 text-sm font-medium text-white bg-gradient-to-r from-green-600 to-green-500 rounded-lg overflow-hidden transition-all hover:scale-105 hover:shadow-xl"
+                              >
+                                <span className="relative z-10">
+                                  Agenda por WhatsApp
+                                </span>
+                                <div className="absolute inset-0 bg-gradient-to-r from-green-500 to-green-400 opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
+                              </button>
+                              <button
+                                onClick={() => scrollToSection("cta")}
+                                className="relative px-6 py-2 text-sm font-medium text-white bg-gradient-to-r from-[oklch(0.70_0.18_248.5)] to-[oklch(0.60_0.20_268.5)] rounded-lg overflow-hidden transition-all hover:scale-105 hover:shadow-xl"
+                              >
+                                <span className="relative z-10">
+                                  Diagnóstico online
+                                </span>
+                                <div className="absolute inset-0 bg-gradient-to-r from-[oklch(0.75_0.22_248.5)] to-[oklch(0.65_0.25_268.5)] opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
+                              </button>
+                            </div>
                           </div>
                           <div className="flex flex-col text-sm h-full justify-end">
                             {item.items?.map((subItem) => (

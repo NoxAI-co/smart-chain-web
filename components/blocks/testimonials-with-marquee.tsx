@@ -35,15 +35,32 @@ export function TestimonialsSection({
         </div>
 
         <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
-          <div className="group flex overflow-hidden p-2 [--gap:1rem] [gap:var(--gap)] flex-row [--duration:40s]">
-            <div className="flex shrink-0 justify-around [gap:var(--gap)] animate-marquee flex-row group-hover:[animation-play-state:paused]">
-              {[...Array(4)].map((_, setIndex) => (
-                testimonials.map((testimonial, i) => (
-                  <TestimonialCard 
-                    key={`${setIndex}-${i}`}
-                    {...testimonial}
-                  />
-                ))
+          <div className="group flex overflow-hidden p-2 [--gap:1rem] [gap:var(--gap)] flex-row">
+            {/* First set of testimonials */}
+            <div className="flex shrink-0 justify-around [gap:var(--gap)] animate-marquee-testimonials flex-row group-hover:[animation-play-state:paused]">
+              {testimonials.map((testimonial, i) => (
+                <TestimonialCard 
+                  key={`set1-${i}`}
+                  {...testimonial}
+                />
+              ))}
+            </div>
+            {/* Duplicate set for seamless loop */}
+            <div className="flex shrink-0 justify-around [gap:var(--gap)] animate-marquee-testimonials flex-row group-hover:[animation-play-state:paused]">
+              {testimonials.map((testimonial, i) => (
+                <TestimonialCard 
+                  key={`set2-${i}`}
+                  {...testimonial}
+                />
+              ))}
+            </div>
+            {/* Third set for extra smoothness */}
+            <div className="flex shrink-0 justify-around [gap:var(--gap)] animate-marquee-testimonials flex-row group-hover:[animation-play-state:paused]">
+              {testimonials.map((testimonial, i) => (
+                <TestimonialCard 
+                  key={`set3-${i}`}
+                  {...testimonial}
+                />
               ))}
             </div>
           </div>
