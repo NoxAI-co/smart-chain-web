@@ -25,16 +25,61 @@ export const Hero = () => {
     return () => clearTimeout(timeoutId);
   }, [titleNumber, titles]);
 
+  const handleScheduleCall = () => {
+    // Aquí puedes agregar la lógica para abrir un calendario o redirigir a una página de contacto
+    window.open('https://calendly.com/tu-usuario', '_blank');
+  };
+
+  const handleFirstStep = () => {
+    // Aquí puedes agregar la lógica para redirigir a una página de contacto o formulario
+    window.open('/contacto', '_blank');
+  };
+
   return (
-    <div className="w-full max-w-full overflow-x-hidden relative">
+    <motion.div 
+      className="w-full max-w-full overflow-x-hidden relative"
+      initial={{ opacity: 0, y: 60 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ 
+        duration: 1.2, 
+        ease: [0.25, 0.46, 0.45, 0.94],
+        delay: 0.3
+      }}
+    >
       <SectionBackground intensity={0.9} speed={45} />
       <div className="container mx-auto px-4">
-        <div className="flex gap-8 pt-32 pb-16 lg:pt-40 lg:pb-20 items-center justify-center flex-col">
-          <div>
+        <motion.div 
+          className="flex gap-8 pt-32 pb-16 lg:pt-40 lg:pb-20 items-center justify-center flex-col"
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ 
+            duration: 1.0, 
+            ease: [0.25, 0.46, 0.45, 0.94],
+            delay: 0.6
+          }}
+        >
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ 
+              duration: 0.8, 
+              ease: [0.25, 0.46, 0.45, 0.94],
+              delay: 0.8
+            }}
+          >
             <TrustedBy />
-          </div>
+          </motion.div>
           
-          <div className="flex gap-4 flex-col">
+          <motion.div 
+            className="flex gap-4 flex-col"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ 
+              duration: 0.8, 
+              ease: [0.25, 0.46, 0.45, 0.94],
+              delay: 1.0
+            }}
+          >
             <h1 className="text-5xl md:text-7xl max-w-2xl tracking-tighter text-center font-regular">
               <span className="text-spektr-cyan-50">Consultoria que une</span>
               <span className="relative flex w-full justify-center overflow-hidden text-center md:pb-4 md:pt-1">
@@ -66,18 +111,36 @@ export const Hero = () => {
             <p className="text-lg md:text-xl leading-relaxed tracking-tight text-muted-foreground max-w-2xl text-center">
             Transformamos organizaciones con un enfoque consciente, modular y centrado en el ser. Creamos impacto real combinando estrategia, cultura e innovación.
             </p>
-          </div>
+          </motion.div>
           
-          <div className="flex flex-row gap-3">
-            <Button size="lg" className="gap-4" variant="outline">
+          <motion.div 
+            className="flex flex-row gap-3"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ 
+              duration: 0.8, 
+              ease: [0.25, 0.46, 0.45, 0.94],
+              delay: 1.2
+            }}
+          >
+            <Button 
+              size="lg" 
+              className="gap-4" 
+              variant="outline"
+              onClick={handleScheduleCall}
+            >
               Agendar llamada <PhoneCall className="w-4 h-4" />
             </Button>
-            <Button size="lg" className="gap-4">
+            <Button 
+              size="lg" 
+              className="gap-4"
+              onClick={handleFirstStep}
+            >
               Primer paso <MoveRight className="w-4 h-4" />
             </Button>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 };

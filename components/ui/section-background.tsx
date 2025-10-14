@@ -48,6 +48,23 @@ export function SectionBackground({
         transition={{ duration: speed * 1.2, ease: "linear", repeat: Infinity }}
       />
 
+      {/* Efecto de luz morada tenue desde la parte inferior */}
+      <div 
+        className="absolute bottom-0 left-0 right-0 h-[60vh] pointer-events-none"
+        style={{
+          background: `linear-gradient(
+            to top,
+            rgba(168, 85, 247, 0.25) 0%,
+            rgba(168, 85, 247, 0.20) 15%,
+            rgba(168, 85, 247, 0.15) 30%,
+            rgba(168, 85, 247, 0.10) 50%,
+            rgba(168, 85, 247, 0.05) 70%,
+            transparent 100%
+          )`,
+          filter: 'blur(3px)',
+        }}
+      />
+
       {/* Degradado lateral para dirigir la mirada al centro (suave) */}
       <div className="absolute inset-y-0 left-0 w-40 bg-gradient-to-r from-background/60 to-transparent" />
       <div className="absolute inset-y-0 right-0 w-40 bg-gradient-to-l from-background/60 to-transparent" />

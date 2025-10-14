@@ -1,3 +1,4 @@
+"use client";
 import {
   MinimalCard,
   MinimalCardDescription,
@@ -5,6 +6,7 @@ import {
   MinimalCardTitle,
 } from "@/components/ui/minimal-card"
 import { Badge } from "@/components/ui/badge"
+import { motion } from "framer-motion"
 
 export function Benefits() {
   const cards = [
@@ -34,30 +36,92 @@ export function Benefits() {
   ]
 
   return (
-    <div id="benefits" className="w-full max-w-full overflow-x-hidden py-16">
+    <motion.div 
+      id="benefits" 
+      className="w-full max-w-full overflow-x-hidden py-16"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ 
+        duration: 0.8, 
+        ease: [0.25, 0.46, 0.45, 0.94]
+      }}
+      viewport={{ once: true, margin: "-100px" }}
+    >
       <div className="container mx-auto px-4">
-        <div className="flex gap-4 py-8 lg:py-12 flex-col items-center text-center">
-          <div>
+        <motion.div 
+          className="flex gap-4 py-8 lg:py-12 flex-col items-center text-center"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ 
+            duration: 0.6, 
+            ease: [0.25, 0.46, 0.45, 0.94],
+            delay: 0.2
+          }}
+          viewport={{ once: true, margin: "-100px" }}
+        >
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ 
+              duration: 0.5, 
+              ease: [0.25, 0.46, 0.45, 0.94],
+              delay: 0.3
+            }}
+            viewport={{ once: true, margin: "-100px" }}
+          >
             <Badge variant={'outline'}>Lo que nos mueve</Badge>
-          </div>
-          <div className="flex gap-2 flex-col items-center">
+          </motion.div>
+          <motion.div 
+            className="flex gap-2 flex-col items-center"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ 
+              duration: 0.6, 
+              ease: [0.25, 0.46, 0.45, 0.94],
+              delay: 0.4
+            }}
+            viewport={{ once: true, margin: "-100px" }}
+          >
             <h2 className="text-3xl md:text-5xl tracking-tighter lg:max-w-xl font-regular">
               Nuestro propósito es ayudarte a encontrar el tuyo
             </h2>
             <p className="text-lg max-w-xl lg:max-w-2xl leading-relaxed tracking-tight text-muted-foreground">
               No creemos en fórmulas genéricas. En Smart Chain acompañamos a las organizaciones a alinearse con su propósito y operar desde su esencia.
             </p>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
         {/* Cards Section */}
-        <div className="w-full max-w-5xl mx-auto">
+        <motion.div 
+          className="w-full max-w-5xl mx-auto"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ 
+            duration: 0.6, 
+            ease: [0.25, 0.46, 0.45, 0.94],
+            delay: 0.6
+          }}
+          viewport={{ once: true, margin: "-100px" }}
+        >
           <div className="flex flex-col justify-center rounded-lg p-4">
             <div className="flex flex-wrap items-center justify-center gap-4">
               {cards.map((card, index) => (
-                <div 
+                <motion.div 
                   key={index}
                   className="w-full sm:w-[calc(25%-12px)] max-w-[260px] min-h-[300px]"
+                  initial={{ opacity: 0, y: 50, scale: 0.9 }}
+                  whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                  transition={{ 
+                    duration: 0.6, 
+                    ease: [0.25, 0.46, 0.45, 0.94],
+                    delay: 0.8 + (index * 0.1)
+                  }}
+                  viewport={{ once: true, margin: "-50px" }}
+                  whileHover={{ 
+                    y: -5, 
+                    scale: 1.02,
+                    transition: { duration: 0.3 }
+                  }}
                 >
                   <MinimalCard className="background rounded-xl bg-[#030811] w-full h-full">
                     <MinimalCardImage
@@ -72,12 +136,12 @@ export function Benefits() {
                       {card.description}
                     </MinimalCardDescription>
                   </MinimalCard>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
-    </div>
+    </motion.div>
   )
 }
